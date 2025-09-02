@@ -1,0 +1,257 @@
+/* Responsive Design */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: 20px;
+    }
+    
+    .nav-menu li a {
+        padding: 6px 12px;
+        font-size: 0.95em;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .clothing-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Navigation Mobile */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(30, 60, 114, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li a {
+        font-size: 1.2em;
+        padding: 15px 30px;
+        white-space: nowrap;
+    }
+    
+    .nav-toggle {
+        display: block;
+        z-index: 1001;
+        padding: 5px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+    
+    .nav-toggle.active {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+    }
+    
+    /* Layout Mobile */
+    .profiles-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    /* Tables Mobile */
+    table {
+        font-size: 0.9em;
+    }
+    
+    th, td {
+        padding: 8px 4px;
+    }
+    
+    /* Badges Mobile */
+    .badges-container {
+        gap: 5px;
+    }
+    
+    .size-badge {
+        font-size: 0.8em;
+        padding: 6px 10px;
+        min-width: 50px;
+    }
+    
+    /* Catalog Mobile */
+    .catalog-filters {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+    
+    .clothing-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .clothing-card {
+        border-radius: 10px;
+    }
+    
+    .clothing-image-container {
+        height: 150px;
+    }
+    
+    .clothing-info {
+        padding: 15px;
+    }
+    
+    .clothing-name {
+        font-size: 1.1em;
+    }
+    
+    .clothing-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .clothing-category {
+        margin-bottom: 8px;
+    }
+    
+    .clothing-description {
+        font-size: 0.85em;
+        margin-bottom: 8px;
+    }
+    
+    .clothing-link {
+        font-size: 0.85em;
+        padding: 5px 10px;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .nav-logo {
+        font-size: 1.3em;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    }
+    
+    .profile {
+        padding: 20px;
+    }
+    
+    .profile-name {
+        font-size: 1.5em;
+    }
+    
+    .profile-icon {
+        font-size: 2.5em;
+    }
+    
+    .conversion-table {
+        padding: 20px;
+    }
+    
+    .conversion-table h2 {
+        font-size: 1.3em;
+    }
+    
+    table {
+        font-size: 0.8em;
+    }
+    
+    th, td {
+        padding: 6px 2px;
+    }
+    
+    .clothing-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.85em;
+        min-width: 80px;
+    }
+    
+    .catalog-filters {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .nav-container {
+        max-width: 1400px;
+    }
+    
+    .clothing-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+
+/* Print Styles */
+@media print {
+    nav {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .profile {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .conversion-table {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .size-badge {
+        background: #f0f0f0 !important;
+        color: black !important;
+        box-shadow: none;
+    }
+}
